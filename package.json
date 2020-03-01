@@ -1,0 +1,23 @@
+{
+  "name": "gitlab-scrum-point-counter",
+  "version": "0.0.1",
+  "description": "This is Chrome extensions that counts point which set as a Gitlab's label. This supports the Scrum Framework on Gitlab.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kengop@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "0.0.98"
+  },
+  "main": "src/background.js",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kengop/gitlab-scrum-point-counter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kengop/gitlab-scrum-point-counter/issues"
+  },
+  "homepage": "https://github.com/kengop/gitlab-scrum-point-counter#readme"
+}
