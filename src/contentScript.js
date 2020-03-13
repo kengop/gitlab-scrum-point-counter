@@ -8,7 +8,7 @@ for (const board of boadCollection) {
   const titleText = titleElement.textContent.trim();
   // init
   boardPoints[titleText] = {
-    title: titleText,
+    status: titleText,
     point: 0,
   };
 
