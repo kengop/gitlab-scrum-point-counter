@@ -24,7 +24,7 @@ for (const board of boadCollection) {
       if (!labelName.startsWith('point:')) {
         continue;
       }
-      const point = parseInt(labelName.substr(6, labelName.length - 6));
+      const point = parseFloat(labelName.substr(6, labelName.length - 6));
       pointSum += point;
     }
   }
