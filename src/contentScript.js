@@ -4,7 +4,7 @@ var boadCollection = document.querySelectorAll('div.board');
 
 var boardPoints = {};
 for (const board of boadCollection) {
-  const titleElement = board.querySelector('span.board-title-text');
+  const titleElement = board.querySelector('.board-title-text');
   const titleText = titleElement.textContent.trim();
   // init
   boardPoints[titleText] = {
