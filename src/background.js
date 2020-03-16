@@ -1,12 +1,10 @@
 'use strict';
 
-const targetHost = 'gitlab.com';
-
 chrome.runtime.onInstalled.addListener(function() {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostEquals: targetHost},
+        css: ['div.board', '.board-title-text']
       })],
       actions: [new chrome.declarativeContent.ShowPageAction()]
     }]);
