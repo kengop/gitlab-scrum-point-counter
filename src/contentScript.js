@@ -16,7 +16,7 @@ for (const board of boadCollection) {
   const visibleCardCollection = board.querySelectorAll('li.board-card');
   let pointSum = 0;
   for (const card of visibleCardCollection) {
-    const labelCollection = card.querySelectorAll('div.board-card-footer button');
+    const labelCollection = card.querySelectorAll('div.board-card-labels button');
     for (const label of labelCollection) {
       const labelName = label.textContent.trim();
 
