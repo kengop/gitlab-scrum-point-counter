@@ -16,16 +16,19 @@ for (const board of boadCollection) {
   const visibleCardCollection = board.querySelectorAll('li.board-card');
   let pointSum = 0;
   for (const card of visibleCardCollection) {
-    const labelCollection = card.querySelectorAll('div.board-card-labels button');
-    for (const label of labelCollection) {
-      const labelName = label.textContent.trim();
+    const labelCollections = card.querySelectorAll('div.board-card-labels');
+    for (const labelCollection of labelCollections) {
+      const labels = labelCollection.querySelectorAll('span.gl-label');
+      for (const label of labels) {
+        const labelName = label.textContent.trim();
 
-      // NOTE: count only label startsWith 'point:'.
-      if (!labelName.startsWith('point:')) {
-        continue;
+        // NOTE: count only label startsWith 'point:'.
+        if (!labelName.startsWith('point:')) {
+          continue;
+        }
+        const point = parseFloat(labelName.substr(6, labelName.length - 6));
+        pointSum += point;
       }
-      const point = parseFloat(labelName.substr(6, labelName.length - 6));
-      pointSum += point;
     }
   }
   boardPoints[titleText].point = pointSum;
